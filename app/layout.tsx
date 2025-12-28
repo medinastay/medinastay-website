@@ -1,26 +1,17 @@
 import "./globals.css";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import { Inter } from "next/font/google";
 
-export const metadata = {
-  title: "MedinaStay",
-  description: "Property Management in der Medina von Tanger",
-};
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  variable: "--font-sans",
+  display: "swap",
+});
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body>
-        <Header />
-        <main style={{ padding: "20px" }}>
-          {children}
-        </main>
-        <Footer />
-      </body>
+    <html lang="en" className={inter.variable}>
+      <body>{children}</body>
     </html>
   );
 }

@@ -1,26 +1,260 @@
-@import "tailwindcss";
+/* ======================================================
+   MedinaStay — Global Styles
+   Goal: calm, premium, owner-grade clarity
+====================================================== */
+
+/* =========================
+   RESET
+========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   DESIGN TOKENS (COLORS / RADII)
+========================= */
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Backgrounds */
+  --bg: #f6f4f1;        /* limewash / off-white */
+  --bg-soft: #ede9e4;   /* cards */
+
+  /* Text */
+  --text: #1f1f1f;      /* warm stone */
+  --muted: #6f6a63;     /* secondary text */
+
+  /* Accent (use sparingly) */
+  --accent: #b08a57;         /* brass / sand */
+  --accent-soft: rgba(176, 138, 87, 0.25);
+
+  /* Borders / radius */
+  --radius: 16px;
+  --border-soft: rgba(0, 0, 0, 0.04);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* =========================
+   BASE TYPOGRAPHY
+========================= */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings: calm, editorial */
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 300;
+  letter-spacing: -0.035em;
+}
+
+h1 {
+  font-size: 52px;
+  line-height: 1.08;
+  margin-bottom: 24px;
+}
+
+h2 {
+  font-size: 28px;
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 1.35;
+  margin-bottom: 12px;
+}
+
+/* Paragraph rhythm (important for "flow") */
+p {
+  margin: 0;
+  line-height: 1.85;
+  max-width: 64ch;
+}
+
+/* Small / micro copy */
+small {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Default vertical rhythm (you can override per-section inline) */
+section {
+  margin-top: 72px;
+}
+
+/* =========================
+   SURFACES (CARDS)
+========================= */
+
+.card {
+  background: var(--bg-soft);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-soft);
+}
+
+/* =========================
+   LISTS
+========================= */
+
+ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+li {
+  margin-bottom: 8px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease, background 0.15s ease;
+}
+
+/* Primary = one clear action */
+.btn-primary {
+  background: var(--accent);
+  color: #ffffff;
+  border: none;
+}
+
+.btn-primary:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+/* Outline = secondary action (quiet) */
+.btn-outline {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent-soft);
+}
+
+.btn-outline:hover {
+  background: rgba(176, 138, 87, 0.08);
+  transform: translateY(-1px);
+}
+
+/* =========================
+   KICKER (small uppercase label)
+========================= */
+
+.kicker {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+/* =========================
+   LINKS (keep quiet)
+========================= */
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* ======================================================
+   HERO (Home page)
+   - Statement lines
+   - Subline + explanation hierarchy
+====================================================== */
+
+.hero-line-primary {
+  display: block;
+  white-space: nowrap; /* keep "property management." in one line */
+}
+
+.hero-line-secondary {
+  display: block;
+  opacity: 0.9;   /* slightly quieter */
+  margin-top: 6px;
+}
+
+.hero-subline {
+  margin-top: 18px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text);
+  max-width: 52ch;
+}
+
+.hero-description {
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--muted);
+  max-width: 64ch;
+}
+
+.hero-note {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  h1 {
+    font-size: 42px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  section {
+    margin-top: 56px;
+  }
 }

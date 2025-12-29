@@ -36,7 +36,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="container" style={{ padding: "56px 0 72px" }}>
+    <div className="container" style={{ padding: "16px 0 72px" }}>
       {/* =========================
           HERO
           Left: statement + CTA

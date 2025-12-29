@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 608">
+  <!-- Transparent background; all shapes are outlines only -->
+  <g fill="none" stroke="currentColor" stroke-width="24" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Outer arched doorway -->
+    <path d="M128 608 V256 a128 128 0 0 1 256 0 V608 Z"/>
+    <!-- Map-pin (forms part of the M apex) -->
+    <path d="M256 320
+             C 231 320 212 339 212 364
+             C 212 408 256 456 256 456
+             C 256 456 300 408 300 364
+             C 300 339 281 320 256 320 Z"/>
+    <!-- Left stem of M -->
+    <path d="M220 468 V560"/>
+    <!-- Right stem of M (diagonal to apex then down) -->
+    <path d="M220 468 L256 404 L292 468"/>
+    <!-- Lower S hook -->
+    <path d="M292 504
+             C 328 504 328 540 292 540
+             C 256 540 256 580 292 580"/>
+  </g>
+</svg>

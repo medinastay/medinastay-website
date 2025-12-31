@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" fill="none">
+  <defs>
+    <pattern id="pattern-mesh" x="0" y="0" width="15" height="15" patternUnits="userSpaceOnUse">
+      <path d="M7.5 0 L15 7.5 L7.5 15 L0 7.5 Z" stroke="#D2B48C" stroke-width="0.3" fill="none"/>
+    </pattern>
+    
+    <style>
+      .outer-arch { stroke: #C5A267; stroke-width: 2.5; fill: none; }
+      .inner-arch { stroke: #D2B48C; stroke-width: 1; fill: url(#pattern-mesh); opacity: 0.4; }
+      .draw-effect {
+        stroke-dasharray: 2000;
+        stroke-dashoffset: 2000;
+        animation: drawPath 3.5s forwards ease-in-out;
+      }
+      @keyframes drawPath { to { stroke-dashoffset: 0; } }
+    </style>
+  </defs>
+
+  <g class="draw-effect">
+    <path class="outer-arch" d="M60,500 L300,500 L300,280 
+      L300,220 
+      C300,140 250,100 190,20 
+      L180,0 L170,20 
+      C110,100 60,140 60,220 
+      L60,280 Z" />
+    <path class="inner-arch" d="M75,500 L285,500 L285,285 
+      L285,225 
+      C285,150 240,115 190,35 
+      L180,20 L170,35 
+      C120,115 75,150 75,225 
+      L75,285 Z" />
+  </g>
+
+  <g class="draw-effect">
+    <path class="outer-arch" d="M380,500 L620,500 L620,280 
+      L620,220 
+      C620,140 570,100 510,20 
+      L500,0 L490,20 
+      C430,100 380,140 380,220 
+      L380,280 Z" />
+    <path class="inner-arch" d="M395,500 L605,500 L605,285 
+      L605,225 
+      C605,150 560,115 510,35 
+      L500,20 L490,35 
+      C440,115 395,150 395,225 
+      L395,285 Z" />
+  </g>
+
+  <g class="draw-effect">
+    <path class="outer-arch" d="M700,500 L940,500 L940,280 
+      L940,220 
+      C940,140 890,100 830,20 
+      L820,0 L810,20 
+      C750,100 700,140 700,220 
+      L700,280 Z" />
+    <path class="inner-arch" d="M715,500 L925,500 L925,285 
+      L925,225 
+      C925,150 880,115 830,35 
+      L820,20 L810,35 
+      C760,115 715,150 715,225 
+      L715,285 Z" />
+  </g>
+</svg>

@@ -42,7 +42,7 @@ export default function HomePage() {
           Left: statement + CTA
           Right: trust signals
          ========================= */}
-      <section style={gridHero}>
+      <section className="home-hero" style={gridHero}>
         {/* HERO LEFT */}
         <div className="card" style={{ padding: 30 }}>
           <div className="kicker">Tangier Medina · Owner first</div>
@@ -107,7 +107,7 @@ export default function HomePage() {
       <section style={{ marginTop: 72 }}>
         <h2 style={{ fontSize: 26, letterSpacing: "-0.02em" }}>How we create value</h2>
 
-        <div style={grid3}>
+       <div className="grid-3" style={grid3}>
           {[
             [
               "Operations",
@@ -172,11 +172,12 @@ export default function HomePage() {
           ABOUT
          ========================= */}
       <section className="card" style={{ marginTop: 72, padding: 24 }}>
-        <div className="kicker">About</div>
+        <div className="kicker">medina stay</div>
         <h2 style={{ fontSize: 26, letterSpacing: "-0.02em", marginTop: 10 }}>Local knowledge. International discipline.</h2>
         <p style={{ color: "var(--muted)", marginTop: 10, lineHeight: 1.75, maxWidth: "76ch" }}>
-          Medina Stay manages premium properties with trusted local partners and clear standards.
-          Owners always know what is happening and what comes next.
+          We operate on site, work with our own team and trusted local partners, and take care of all operational, technical, 
+          and organizational aspects of a property. 
+          Owners remain informed and in control, without being involved in daily execution.
         </p>
       </section>
 
@@ -186,7 +187,7 @@ export default function HomePage() {
       <section style={{ marginTop: 72 }}>
         <h2 style={{ fontSize: 26, letterSpacing: "-0.02em" }}>FAQ</h2>
 
-        <div style={grid2}>
+       <div className="grid-2" style={grid2}>
           {[
             ["How do you charge?", "We charge a management fee based on revenue. Renovation and setup are priced separately."],
             ["What is included in operations?", "Daily pricing, guest and cleaning coordination, quality checks, and light maintenance."],

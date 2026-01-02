@@ -162,11 +162,11 @@ export default function ServicesPage() {
                   <li>Coordination of local craftsmen</li>
                   <li>On-site supervision and quality control</li>
                   <li>Renovation project management from start to finish</li>
-                  <li>Furnishing and setup</li>
+                  <li>Handling permits and coordination with local authorities</li>
                 </ul>
 
                 <div className="editorial-service-note">
-                  <strong>For owners: </strong> 
+                  <strong>For owners: </strong>
                   One point of contact.
                   One clear plan.
                   One finished property.
@@ -181,54 +181,70 @@ export default function ServicesPage() {
       {/* =========================
          THE FRAMEWORK
       ========================= */}
-    <section className="section-framework">
-  <div className="container">
-    <h2 className="framework-title">Our Framework</h2>
+      <section className="section-framework">
+        <div className="container">
+          <h2 className="framework-title">Our Framework</h2>
 
-    <div className="framework-arches">
-      {/* SVG BACKGROUND */}
-      <img
-        src="/framework-boegen2.svg"
-        alt=""
-        className="framework-arches-svg"
-        aria-hidden="true"
-      />
+          <div className="framework-arches">
+            {/* SVG BACKGROUND */}
+            <img
+              src="/framework-boegen2.svg"
+              alt=""
+              className="framework-arches-svg"
+              aria-hidden="true"
+            />
 
-      {/* ARCH 1 */}
-      <div className="framework-arch arch-1">
-        <h3>Pricing</h3>
-        <p>
-          No fixed packages. Ongoing management is revenue-based or monthly.
-          Renovation and setup are scoped and agreed before work starts.
-        </p>
-      </div>
+            {/* ARCH 1 */}
+            <div className="framework-arch arch-1">
+              <h3>Pricing</h3>
+              <p>
+                There are no fixed prices.
+                <br />◇<br />
+                Pricing depends on the property and the rental model.
+                <br />◆<br />
+                Renovation projects are priced based on scope and budget.
+                <br />◇<br />
+                All pricing is discussed clearly before start.
+              </p>
+            </div>
 
-      {/* ARCH 2 */}
-      <div className="framework-arch arch-2">
-        <h3>Reporting</h3>
-        <p>
-          Monthly reporting with clear updates on performance, costs, and next
-          steps. Quarterly reviews available if required.
-        </p>
-      </div>
+            {/* ARCH 2 */}
+            <div className="framework-arch arch-2">
+              <h3>Reporting</h3>
+              <p>
+                Clear overview of what matters.
+                <br />◇<br />
+                Reporting on performance, costs, and property condition.
+                <br />◆<br />
+                Owners receive updates regularly. 
+                <br />◇<br />
+                No daily involvement required.
+              </p>
+            </div>
 
-      {/* ARCH 3 */}
-      <div className="framework-arch arch-3">
-        <h3>Operating model</h3>
-        <p>
-          Not a booking platform. Not a mass operator. Limited portfolio to
-          protect quality, control, and accountability.
-        </p>
-      </div>
-    </div>
+            {/* ARCH 3 */}
+            <div className="framework-arch arch-3">
+              <h3>Operating model</h3>
+              <p>
+                We are not a booking platform.
+                <br />◇<br />
+                Each property is managed as part of one system.
+                <br />◆<br />
+                We work with a limited number of properties
+                to keep control and responsibility.
+                <br />◇<br />
+                We are not a mass operator.
+              </p>
+            </div>
+          </div>
 
-    <div className="framework-cta">
-      <a className="btn btn-outline" href="/contact">
-        Request assessment
-      </a>
-    </div>
-  </div>
-</section>
+          <div className="framework-cta">
+            <a className="btn btn-outline" href="/contact">
+              Request assessment
+            </a>
+          </div>
+        </div>
+      </section>
 
     </main>
   );

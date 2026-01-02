@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" fill="none">
   <defs>
-    <pattern id="pattern-mesh" x="0" y="0" width="15" height="15" patternUnits="userSpaceOnUse">
-      <path d="M7.5 0 L15 7.5 L7.5 15 L0 7.5 Z" stroke="#D2B48C" stroke-width="0.3" fill="none"/>
+    <pattern id="pattern-mesh" x="0" y="0" width="15.000" height="15.000" patternUnits="userSpaceOnUse">
+      <path d="M7.500 0.000 L15.000 7.500 L7.500 15.000 L0.000 7.500 Z" stroke="#D2B48C" stroke-width="0.300" fill="none"/>
     </pattern>
-    
+
     <style>
-      .outer-arch { stroke: #C5A267; stroke-width: 2.5; fill: none; }
-      .inner-arch { stroke: #D2B48C; stroke-width: 1; fill: url(#pattern-mesh); opacity: 0.4; }
+      .outer-arch { stroke: #C5A267; stroke-width: 2.500; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .inner-arch { stroke: #D2B48C; stroke-width: 1.000; fill: url(#pattern-mesh); opacity: 0.400; stroke-linecap: round; stroke-linejoin: round; }
       .draw-effect {
-        stroke-dasharray: 2000;
-        stroke-dashoffset: 2000;
+        stroke-dasharray: 2500;
+        stroke-dashoffset: 2500;
         animation: drawPath 3.5s forwards ease-in-out;
       }
       @keyframes drawPath { to { stroke-dashoffset: 0; } }
@@ -17,47 +17,53 @@
   </defs>
 
   <g class="draw-effect">
-    <path class="outer-arch" d="M60,500 L300,500 L300,280 
-      L300,220 
-      C300,140 250,100 190,20 
-      L180,0 L170,20 
-      C110,100 60,140 60,220 
-      L60,280 Z" />
-    <path class="inner-arch" d="M75,500 L285,500 L285,285 
-      L285,225 
-      C285,150 240,115 190,35 
-      L180,20 L170,35 
-      C120,115 75,150 75,225 
-      L75,285 Z" />
+    <path class="outer-arch" d="
+      M20.000,600.000
+      L300.000,600.000
+      L300.000,280.000
+      C300.000,120.000 20.000,120.000 20.000,280.000
+      L20.000,600.000
+      Z" />
+    <path class="inner-arch" d="
+      M35.000,585.000
+      L285.000,585.000
+      L285.000,285.000
+      C285.000,140.000 35.000,140.000 35.000,285.000
+      L35.000,585.000
+      Z" />
   </g>
 
   <g class="draw-effect">
-    <path class="outer-arch" d="M380,500 L620,500 L620,280 
-      L620,220 
-      C620,140 570,100 510,20 
-      L500,0 L490,20 
-      C430,100 380,140 380,220 
-      L380,280 Z" />
-    <path class="inner-arch" d="M395,500 L605,500 L605,285 
-      L605,225 
-      C605,150 560,115 510,35 
-      L500,20 L490,35 
-      C440,115 395,150 395,225 
-      L395,285 Z" />
+    <path class="outer-arch" d="
+      M360.000,600.000
+      L640.000,600.000
+      L640.000,280.000
+      C640.000,120.000 360.000,120.000 360.000,280.000
+      L360.000,600.000
+      Z" />
+    <path class="inner-arch" d="
+      M375.000,585.000
+      L625.000,585.000
+      L625.000,285.000
+      C625.000,140.000 375.000,140.000 375.000,285.000
+      L375.000,585.000
+      Z" />
   </g>
 
   <g class="draw-effect">
-    <path class="outer-arch" d="M700,500 L940,500 L940,280 
-      L940,220 
-      C940,140 890,100 830,20 
-      L820,0 L810,20 
-      C750,100 700,140 700,220 
-      L700,280 Z" />
-    <path class="inner-arch" d="M715,500 L925,500 L925,285 
-      L925,225 
-      C925,150 880,115 830,35 
-      L820,20 L810,35 
-      C760,115 715,150 715,225 
-      L715,285 Z" />
+    <path class="outer-arch" d="
+      M700.000,600.000
+      L980.000,600.000
+      L980.000,280.000
+      C980.000,120.000 700.000,120.000 700.000,280.000
+      L700.000,600.000
+      Z" />
+    <path class="inner-arch" d="
+      M715.000,585.000
+      L965.000,585.000
+      L965.000,285.000
+      C965.000,140.000 715.000,140.000 715.000,285.000
+      L715.000,585.000
+      Z" />
   </g>
 </svg>

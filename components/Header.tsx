@@ -59,13 +59,13 @@ export default function Header() {
 
         {/* RIGHT */}
         <div className="header-social">
-          <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+          <a href="https://www.instagram.com/medinastay/#" target="_blank" aria-label="Instagram">
             <Instagram size={18} />
           </a>
           <a href="https://wa.me/212XXXXXXX" target="_blank" aria-label="WhatsApp">
             <MessageCircle size={18} />
           </a>
-          <a href="https://maps.google.com" target="_blank" aria-label="Google">
+          <a href="https://www.google.com/maps/place/35%C2%B047'21.1%22N+5%C2%B048'55.5%22W/@35.789202,-5.815416,17z/data=!3m1!4b1!4m4!3m3!8m2!3d35.789202!4d-5.815416?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" aria-label="Google">
             <MapPin size={18} />
           </a>
         </div>

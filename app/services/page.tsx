@@ -24,12 +24,12 @@ export default function ServicesPage() {
 
         <div className="container">
           <div className="stage-inner">
-            <div className="kicker">medina stay</div>
+            <div className="kicker">medina stay · Tangier Morocco</div>
 
             <h1 className="stage-title">
-              Local knowledge.
+              local knowledge.
               <br />
-              International discipline.
+              international discipline.
             </h1>
 
             <p className="stage-sub">
@@ -50,7 +50,7 @@ export default function ServicesPage() {
 
           <div className="editorial-services">
             {/* ROW 1 — Rental */}
-            <article className="editorial-service-row editorial-service-row--rental">
+            <article id="operations" className="editorial-service-row editorial-service-row--rental">
               <div className="editorial-service-media">
                 <Image
                   src="/services-rent.png"
@@ -91,7 +91,7 @@ export default function ServicesPage() {
             </article>
 
             {/* ROW 2 — Care */}
-            <article className="editorial-service-row editorial-service-row--care">
+            <article id="care" className="editorial-service-row editorial-service-row--care">
               <div className="editorial-service-box">
                 <h3 className="editorial-service-heading">
                   Property Care &amp; Planning
@@ -132,7 +132,7 @@ export default function ServicesPage() {
             </article>
 
             {/* ROW 3 — Renovation */}
-            <article className="editorial-service-hero">
+            <article id="renovation" className="editorial-service-hero">
 
               <div className="editorial-service-heroMedia">
                 <Image
@@ -183,7 +183,7 @@ export default function ServicesPage() {
       ========================= */}
       <section className="section-framework">
         <div className="container">
-          <h2 className="framework-title">Our Framework</h2>
+          <h2 className="section-title">Our Framework</h2>
 
           <div className="framework-arches">
             {/* SVG BACKGROUND */}

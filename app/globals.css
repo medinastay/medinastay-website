@@ -1,11 +1,16 @@
 /* ======================================================
-   MedinaStay — Global Styles (clean)
+   MedinaStay — Global Styles (clean + structured)
    Goal: calm, premium, owner-grade clarity
+   Notes:
+   - Base styles are global and stable.
+   - Services page styles live in "SERVICES" sections.
+   - Home-only overrides live in "HOME" sections.
+   - Mobile rules are grouped at the end to avoid duplicates.
 ====================================================== */
 
-/* =========================
-   RESET (minimal, safe)
-========================= */
+/* ======================================================
+   01) RESET
+====================================================== */
 *,
 *::before,
 *::after {
@@ -18,9 +23,14 @@ body {
   padding: 0;
 }
 
-/* =========================
-   TOKENS (colors / radius)
-========================= */
+/* Keep layout stable when switching pages (prevents tiny horizontal shift) */
+html {
+  scrollbar-gutter: stable;
+}
+
+/* ======================================================
+   02) TOKENS
+====================================================== */
 :root {
   /* Backgrounds */
   --bg: #f6f4f1;
@@ -39,9 +49,9 @@ body {
   --border-soft: rgba(0, 0, 0, 0.04);
 }
 
-/* =========================
-   BASE TYPOGRAPHY
-========================= */
+/* ======================================================
+   03) BASE TYPOGRAPHY
+====================================================== */
 html,
 body {
   font-family: var(--font-sans);
@@ -52,7 +62,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Headings */
+/* Default headings (page components can override per section) */
 h1,
 h2,
 h3 {
@@ -61,25 +71,6 @@ h3 {
   letter-spacing: -0.035em;
 }
 
-h1 {
-  font-size: 52px;
-  line-height: 1.08;
-  margin-bottom: 24px;
-}
-
-h2 {
-  font-size: 28px;
-  line-height: 1.25;
-  margin-bottom: 20px;
-}
-
-h3 {
-  font-size: 18px;
-  line-height: 1.35;
-  margin-bottom: 12px;
-}
-
-/* Paragraph rhythm */
 p {
   margin: 0;
   line-height: 1.85;
@@ -91,42 +82,36 @@ small {
   color: var(--muted);
 }
 
-/* =========================
-   LAYOUT
-========================= */
+/* ======================================================
+   04) LAYOUT
+====================================================== */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
+/* Default vertical rhythm for sections */
 section {
   margin-top: 72px;
 }
 
-/* Prevent accidental horizontal scroll (desktop too) */
-
-html {
-  
-}
-
+/* Prevent accidental horizontal scroll */
 body {
   overflow-x: hidden;
   overflow-y: auto;
 }
 
-/* =========================
-   SURFACES
-========================= */
+/* ======================================================
+   05) SURFACES / UI
+====================================================== */
 .card {
   background: var(--bg-soft);
   border-radius: var(--radius);
   border: 1px solid var(--border-soft);
 }
 
-/* =========================
-   LISTS
-========================= */
+/* Lists */
 ul {
   margin: 0;
   padding-left: 18px;
@@ -138,9 +123,16 @@ li {
   color: var(--muted);
 }
 
-/* =========================
-   BUTTONS
-========================= */
+/* Links */
+a {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -156,7 +148,7 @@ li {
 }
 
 .btn-primary {
-  background: var(--accent);
+  background: rgba(176, 138, 87, 0.7); /* softer primary */
   color: #ffffff;
   border: none;
 }
@@ -177,9 +169,7 @@ li {
   transform: translateY(-1px);
 }
 
-/* =========================
-   KICKER
-========================= */
+/* Kicker (small uppercase label) */
 .kicker {
   font-size: 12px;
   letter-spacing: 0.08em;
@@ -187,58 +177,24 @@ li {
   font-weight: 500;
   color: var(--accent);
   padding-left: 4px;
-}
-
-/* =========================
-   LINKS
-========================= */
-a {
-  color: inherit;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-/* ======================================================
-   HOME HERO HELPERS
-====================================================== */
-.hero-line-primary {
-  display: block;
-  white-space: nowrap;
-}
-
-.hero-line-secondary {
-  display: block;
-  opacity: 0.9;
   margin-top: 6px;
 }
 
-.hero-subline {
-  margin-top: 18px;
-  font-size: 18px;
-  line-height: 1.6;
-  color: var(--text);
-  max-width: 52ch;
-}
-
-.hero-description {
-  margin-top: 10px;
-  font-size: 15px;
-  line-height: 1.75;
-  color: var(--muted);
-  max-width: 64ch;
-}
-
-.hero-note {
-  margin-top: 16px;
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.6;
+/* ======================================================
+   06) SHARED SECTION TITLE (your chosen style)
+   Use: <h2 className="section-title">...</h2>
+====================================================== */
+.section-title {
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  margin: 0;
+  color: rgba(31, 31, 31, 0.5);
 }
 
 /* ======================================================
-   HEADER (desktop + mobile logo only)
+   07) HEADER (global)
 ====================================================== */
 .site-header {
   position: sticky;
@@ -247,6 +203,14 @@ a:hover {
   background: rgba(247, 244, 238, 0.86);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-soft);
+
+  /* hide/show animation */
+  transition: transform 240ms ease, opacity 240ms ease, background 240ms ease;
+  will-change: transform;
+}
+
+.site-header--hidden {
+  transform: translateY(-110%);
 }
 
 .header-inner {
@@ -256,8 +220,6 @@ a:hover {
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   gap: 16px;
-
-   
 }
 
 /* left nav */
@@ -345,14 +307,13 @@ a:hover {
 }
 
 /* ======================================================
-   SERVICES PAGE — Stage + Editorial Services + Framework
+   08) STAGE / HERO (shared base)
+   Used on Services and Home. Variants below.
 ====================================================== */
-
-/* --- Stage / Hero --- */
 .stage {
   position: relative;
   overflow: hidden;
-  padding: 92px 0 72px;
+  padding: 92px 0 72px; /* Services default */
   border-bottom: 1px solid var(--border-soft);
 }
 
@@ -368,16 +329,23 @@ a:hover {
   opacity: 1;
 }
 
+/* Default overlay (Services) */
 .stage-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(1200px 480px at 20% 35%,
-      rgba(246, 244, 241, 0.25),
-      rgba(246, 244, 241, 0.82)),
-    linear-gradient(to bottom,
-      rgba(246, 244, 241, 0.68),
-      rgba(246, 244, 241, 0.92));
+  background:
+    radial-gradient(
+      1200px 480px at 20% 35%,
+      rgba(246, 244, 241, 0.18),
+      rgba(246, 244, 241, 0.82)
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(246, 244, 241, 0.62),
+      rgba(246, 244, 241, 0.92)
+    );
 }
+
 
 .stage .container {
   position: relative;
@@ -405,11 +373,70 @@ a:hover {
   max-width: 62ch;
 }
 
-/* --- Editorial services --- */
+#operations, #care, #renovation {
+  scroll-margin-top: 110px; /* header height + air */
+}
+
+/* ======================================================
+   09) HOME — HERO helpers + variants
+====================================================== */
+.stage--home {
+  /* you wanted Home a bit more compact than Services */
+  padding: 72px 0 56px;
+}
+
+.stage-overlay--home {
+  background: linear-gradient(
+    to right,
+    rgba(246, 244, 241, 1),
+    rgba(246, 244, 241, 0.95),
+    rgba(246, 244, 241, 0.75)
+  );
+}
+
+.stage-inner--home {
+  max-width: 860px;
+}
+
+.stage-title--home {
+  margin-top: 10px;
+}
+
+/* Ensure long words break on mobile (no cutoff) */
+.hero-line-primary {
+  display: block;
+  white-space: normal;
+}
+
+.hero-line-secondary {
+  display: block;
+  opacity: 0.9;
+  margin-top: 8px;
+}
+
+/* Home hero text (two lines, muted) */
+.hero-description {
+  margin-top: 14px;
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--muted);
+  max-width: 64ch;
+}
+
+/* Home hero buttons */
+.home-hero-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+/* ======================================================
+   10) SERVICES — Editorial Services blocks
+====================================================== */
 .editorial-services {
   display: grid;
   gap: 120px;
-  /* FIX: must have unit */
   margin-top: 26px;
 }
 
@@ -450,6 +477,7 @@ a:hover {
   backdrop-filter: blur(6px);
 }
 
+/* overlap like editorial */
 .editorial-service-row--rental .editorial-service-box {
   margin-left: -190px;
 }
@@ -495,11 +523,6 @@ a:hover {
   color: var(--muted);
 }
 
-.editorial-service-noteLabel {
-  color: var(--text);
-  font-weight: 600;
-}
-
 /* service 03 hero */
 .editorial-service-hero {
   position: relative;
@@ -533,19 +556,13 @@ a:hover {
   backdrop-filter: blur(6px);
 }
 
-/* --- Framework arches --- */
+/* ======================================================
+   11) FRAMEWORK (Services base)
+====================================================== */
 .section-framework {
   margin-top: 72px;
   padding: 48px 0 24px;
   background: var(--bg);
-}
-
-.framework-title {
-  font-size: 26px;
-  font-weight: 400;
-  letter-spacing: -0.01em;
-  line-height: 1.25;
-  margin: 0;
 }
 
 .framework-arches {
@@ -562,7 +579,7 @@ a:hover {
   opacity: 0.95;
 }
 
-/* text boxes inside arches */
+/* text inside arches (Services) */
 .framework-arch {
   position: absolute;
   width: 26%;
@@ -575,12 +592,10 @@ a:hover {
   left: 3%;
   top: 53%;
 }
-
 .arch-2 {
   left: 37%;
   top: 53%;
 }
-
 .arch-3 {
   left: 71%;
   top: 53%;
@@ -608,27 +623,196 @@ a:hover {
 }
 
 /* ======================================================
-   RESPONSIVE — mobile + tablet (single source of truth)
+   12) HOME — "What you can expect" (editorial overlap)
+   Structure: left box, right image, box overlaps into image.
+====================================================== */
+.section-expect {
+  margin-top: 72px;
+}
+
+.expect-wrap {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 22px;
+  align-items: center;
+}
+
+/* Image (right) */
+.expect-media {
+  position: relative;
+  min-height: 360px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+}
+
+.expect-media img {
+  filter: saturate(0.8) contrast(0.8);
+  transform: scale(1);
+}
+
+/* Soft edge fade (short, only at sides) */
+.expect-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to left,
+    rgba(246, 244, 241, 0.85) 0%,
+    rgba(246, 244, 241, 0.45) 12%,
+    rgba(246, 244, 241, 0) 28%,
+    rgba(246, 244, 241, 0) 72%,
+    rgba(246, 244, 241, 0.45) 88%,
+    rgba(246, 244, 241, 0.85) 100%
+  );
+  pointer-events: none;
+}
+
+/* Text box (left) */
+.expect-box {
+  position: relative;
+  z-index: 2;
+  padding: 30px;
+  border-radius: var(--radius);
+  background: rgba(246, 244, 241, 0.78);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(7px);
+
+  /* overlap into image */
+  margin-right: -160px;
+}
+
+.expect-items {
+  margin-top: 12px;
+  display: grid;
+  gap: 12px;
+}
+
+.expect-title {
+  font-weight: 800;
+  letter-spacing: 0;
+  font-size: 17px;
+}
+
+.expect-desc {
+  color: var(--muted);
+  margin-top: 4px;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* ======================================================
+   13) HOME — Framework arches with cards inside
+   (Home uses the same SVG but shows "cards" positioned in arches)
+====================================================== */
+.section-framework--home {
+  background: var(--bg);
+  padding: 20px 0 16px;
+}
+
+/* Pull arches up closer to title */
+.framework-arches--home {
+  max-width: 1100px;
+  margin-top: -60px;
+}
+
+/* Move the cards slightly (fine tuned for home) */
+.framework-arch--home {
+  transform: translateY(-62px);
+  padding: 0 18px;
+}
+
+/* Card styling inside home arches */
+.framework-card {
+  background: rgba(246, 244, 241, 0.92);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: var(--radius);
+  padding: 18px;
+  backdrop-filter: blur(6px);
+}
+
+.framework-card-title {
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: 16px;
+}
+
+.framework-card-desc {
+  color: rgba(31, 31, 31, 0.78);
+  margin-top: 8px;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.framework-card-list {
+  margin-top: 12px;
+  padding-left: 18px;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.framework-card-list li {
+  color: rgba(31, 31, 31, 0.78);
+}
+
+.framework-card-cta {
+  margin-top: 12px;
+}
+
+/* ======================================================
+   14) HOME — How it works (shadow cards)
+====================================================== */
+.home-steps {
+  margin-top: 72px;
+}
+
+.home-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.home-step-card {
+  padding: 18px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.06);
+}
+
+.home-step-title {
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.home-step-desc {
+  color: var(--muted);
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ======================================================
+   15) RESPONSIVE (Tablet / Mobile)
+   IMPORTANT: only one source of truth here.
 ====================================================== */
 
-/* Tablet (iPad) */
+/* Tablet */
 @media (max-width: 1100px) {
   .container {
     padding: 0 20px;
   }
 
+  /* Services overlaps slightly reduced */
   .editorial-service-row--rental .editorial-service-box {
     margin-left: -120px;
-    /* reduce overlap on iPad */
   }
 
   .editorial-service-row--care .editorial-service-box {
     margin-right: -120px;
   }
 
+  /* Framework spacing reduced */
   .framework-arches {
     max-width: 860px;
-    /* reduce risk of overflow */
   }
 
   .framework-arch {
@@ -638,30 +822,16 @@ a:hover {
 
 /* Mobile */
 @media (max-width: 900px) {
-
-  /* global spacing */
-  .container {
-    padding: 0 24px;
-  }
-
+  /* Global rhythm */
   section {
     margin-top: 56px;
-  }
-
-  h1 {
-    font-size: 36px;
-    line-height: 1.15;
-  }
-
-  h2 {
-    font-size: 23px;
   }
 
   p {
     max-width: 100%;
   }
 
-  /* header: logo only */
+  /* Header: logo + nav scroll, hide socials */
   .header-inner {
     grid-template-columns: 1fr;
     min-height: auto;
@@ -669,12 +839,10 @@ a:hover {
     gap: 10px;
   }
 
-  /* keep logo + nav, hide socials */
   .header-social {
     display: none;
   }
 
-  /* show nav under logo */
   .header-nav-left {
     display: flex;
     justify-content: center;
@@ -685,12 +853,10 @@ a:hover {
     -webkit-overflow-scrolling: touch;
   }
 
-  /* hide scrollbar line (optional but nice) */
   .header-nav-left::-webkit-scrollbar {
     display: none;
   }
 
-  /* keep brand text hidden (logo only) */
   .brand-text {
     display: none;
   }
@@ -699,7 +865,6 @@ a:hover {
     width: 38px;
   }
 
-  /* mobile nav style (compact) */
   .nav-link {
     font-size: 12px;
     letter-spacing: 0.08em;
@@ -707,7 +872,7 @@ a:hover {
     padding: 0;
   }
 
-  /* stage */
+  /* Stage (shared) */
   .stage {
     padding: 72px 0 56px;
   }
@@ -720,7 +885,12 @@ a:hover {
     font-size: 15px;
   }
 
-  /* services: stack + remove overlaps */
+  /* Home stage variant */
+  .stage--home {
+    padding: 72px 0 56px;
+  }
+
+  /* Services: stack + remove overlaps */
   .editorial-service-row {
     display: flex;
     flex-direction: column;
@@ -739,7 +909,7 @@ a:hover {
     aspect-ratio: 4 / 3;
   }
 
-  /* service 03: stack */
+  /* Services service 03 stack */
   .editorial-service-hero {
     min-height: auto;
   }
@@ -758,7 +928,7 @@ a:hover {
     margin-top: 14px;
   }
 
-  /* framework: stack text blocks */
+  /* Framework on mobile: stack (Services base behavior) */
   .framework-arches-svg {
     display: none;
   }
@@ -783,5 +953,33 @@ a:hover {
 
   .framework-cta {
     justify-content: flex-start;
+  }
+
+  /* Home: Expect section stack + remove overlap */
+  .expect-wrap {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .expect-box {
+    margin-right: 0;
+    margin-left: 0;
+    padding: 24px;
+  }
+
+  .expect-media {
+    min-height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  /* Home: steps stack */
+  .home-steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Home: arches cards on mobile (follow stacked framework rules) */
+  .framework-arch--home {
+    transform: none;
+    padding: 0;
   }
 }

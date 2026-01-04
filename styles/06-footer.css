@@ -1,0 +1,183 @@
+/* ======================================================
+   06) FOOTER — clean, aligned, compact
+   Structure: Brand | Contact | Pages | Legal + Bottom bar
+   Scoped list reset to avoid global ul/li interference
+====================================================== */
+
+.site-footer {
+  background: rgba(237, 233, 228, 0.55);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  margin-top: 70px;
+}
+
+.site-footer__inner {
+  padding: 52px 0;
+  display: grid;
+
+  /* last 2 cols auto so Pages sits close to Legal */
+  grid-template-columns: 1.25fr 1fr auto auto;
+
+  column-gap: 34px;
+  row-gap: 28px;
+
+  align-items: start;
+}
+
+/* Scoped reset (avoid global ul/li styles messing with footer) */
+.site-footer ul,
+.site-footer li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer a {
+  color: rgba(31, 31, 31, 0.72);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: rgba(31, 31, 31, 0.9);
+}
+
+/* --- Brand --- */
+.site-footer__brandLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0px;
+}
+
+.site-footer__logo {
+  width: 40px;
+  height: 40px;
+  display: block;
+  transform: translate(-3px, -2px);
+}
+
+.site-footer__brandName {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.site-footer__brandTag {
+  margin-top: 3px;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(31, 31, 31, 0.55);
+  line-height: 1.1;
+}
+
+.site-footer__desc {
+  margin-top: 14px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(31, 31, 31, 0.68);
+  max-width: 44ch;
+}
+
+/* --- Column titles --- */
+.site-footer__colTitle {
+  margin: 0 0 12px;
+  font-size: 12px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: rgba(31, 31, 31, 0.55);
+}
+
+/* --- Pages / Legal links --- */
+.site-footer__links {
+  display: grid;
+  gap: 10px;
+}
+
+.site-footer__links a {
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+/* --- Contact: aligned with link lists --- */
+.site-footer__contact {
+  display: grid;
+  gap: 10px;
+}
+
+.site-footer__contact li {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 10px;
+  align-items: center;
+
+  font-size: 13px;
+  line-height: 1.35;
+  color: rgba(31, 31, 31, 0.72);
+}
+
+.site-footer__contact svg {
+  width: 15px;
+  height: 15px;
+  opacity: 0.75;
+}
+
+/* --- Bottom bar --- */
+.site-footer__bottom {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  background: rgba(246, 244, 241, 0.35);
+}
+
+.site-footer__bottomInner {
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.site-footer__copyright {
+  font-size: 12.5px;
+  color: rgba(31, 31, 31, 0.55);
+}
+
+.site-footer__social {
+  display: flex;
+  gap: 10px;
+}
+
+.site-footer__social a {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(246, 244, 241, 0.6);
+  color: rgba(31, 31, 31, 0.65);
+}
+
+.site-footer__social a:hover {
+  background: rgba(246, 244, 241, 0.85);
+  color: rgba(31, 31, 31, 0.85);
+}
+
+/* --- Responsive --- */
+@media (max-width: 1000px) {
+  .site-footer__inner {
+    grid-template-columns: 1.2fr 1fr auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .site-footer__inner {
+    grid-template-columns: 1fr;
+    padding: 40px 0;
+    row-gap: 22px;
+  }
+
+  .site-footer__bottomInner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

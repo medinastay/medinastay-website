@@ -1,0 +1,131 @@
+/* ======================================================
+   02) BASE — Reset, Typography, Elements
+   Keep global defaults neutral. Section/page CSS will style specifics.
+====================================================== */
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Keep layout stable when switching pages */
+html {
+  scrollbar-gutter: stable;
+}
+
+/* ---------- Body / Typography ---------- */
+body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Prevent accidental horizontal scroll */
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 300;
+  letter-spacing: -0.035em;
+}
+
+p {
+  margin: 0;
+  line-height: 1.85;
+  max-width: 64ch;
+}
+
+small {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ---------- Links ---------- */
+a {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* ---------- Lists (neutral globally) ---------- */
+ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+li {
+  margin: 0;
+  line-height: 1.7;
+  /* IMPORTANT: no global color here */
+}
+
+/* ---------- UI Surface helper ---------- */
+.card {
+  background: var(--bg-soft);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-soft);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease, background 0.15s ease;
+}
+
+.btn-primary {
+  background: rgba(176, 138, 87, 0.7); /* softer primary */
+  color: #ffffff;
+  border: none;
+}
+
+.btn-primary:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent-soft);
+}
+
+.btn-outline:hover {
+  background: rgba(176, 138, 87, 0.08);
+  transform: translateY(-1px);
+}
+
+/* ---------- Kicker ---------- */
+.kicker {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--accent);
+  padding-left: 4px;
+  margin-top: 6px; /* can be overridden in stage baseline */
+}

@@ -236,7 +236,7 @@ export default function HomePage() {
       </section>
       
       {/* 6) CLOSING CTA */}
-      <section style={{ marginTop: 72 }}>
+      <section>
         <div className="container">
           <div className="cta-band">
             <div className="kicker">Next step</div>

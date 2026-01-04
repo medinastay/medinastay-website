@@ -1,0 +1,29 @@
+/* ======================================================
+   01) TOKENS — MedinaStay Design System
+   Only variables here. No classes.
+====================================================== */
+
+:root {
+  /* Backgrounds */
+  --bg: #f6f4f1;
+  --bg-soft: #ede9e4;
+
+  /* Text */
+  --text: #1f1f1f;
+  --muted: #6f6a63;
+
+  /* Accent */
+  --accent: #b08a57;
+  --accent-soft: rgba(176, 138, 87, 0.25);
+
+  /* Borders / radius */
+  --radius: 16px;
+  --border-soft: rgba(0, 0, 0, 0.04);
+
+  /* Layout rhythm */
+  --section-space-desktop: 72px;
+  --section-space-mobile: 56px;
+
+  /* Header offsets (for anchor scroll / spacing) */
+  --header-offset: 110px;
+}

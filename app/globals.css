@@ -189,7 +189,7 @@ a:hover {
   font-weight: 500;
   letter-spacing: -0.02em;
   line-height: 1.25;
-  margin: 0;
+  margin: 0 0 60px;
   color: rgba(31, 31, 31, 0.5);
 }
 
@@ -200,7 +200,7 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(247, 244, 238, 0.86);
+  background: rgba(237, 233, 228, 0.8);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-soft);
 
@@ -227,6 +227,7 @@ a:hover {
   display: flex;
   gap: 22px;
   align-items: center;
+  transform: translateY(8px);
 }
 
 .nav-link {
@@ -272,7 +273,7 @@ a:hover {
 .brand-name {
   font-size: 18px;
   font-weight: 600;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1.05;
 }
 
@@ -291,6 +292,7 @@ a:hover {
   justify-content: flex-end;
   gap: 14px;
   align-items: center;
+  transform: translateY(8px);
 }
 
 .header-social a {
@@ -380,26 +382,15 @@ a:hover {
 /* ======================================================
    09) HOME — HERO helpers + variants
 ====================================================== */
-.stage--home {
-  /* you wanted Home a bit more compact than Services */
-  padding: 72px 0 56px;
-}
+
 
 .stage-overlay--home {
   background: linear-gradient(
     to right,
-    rgba(246, 244, 241, 1),
     rgba(246, 244, 241, 0.95),
+    rgba(246, 244, 241, 0.9),
     rgba(246, 244, 241, 0.75)
   );
-}
-
-.stage-inner--home {
-  max-width: 860px;
-}
-
-.stage-title--home {
-  margin-top: 10px;
 }
 
 /* Ensure long words break on mobile (no cutoff) */
@@ -416,11 +407,11 @@ a:hover {
 
 /* Home hero text (two lines, muted) */
 .hero-description {
-  margin-top: 14px;
-  font-size: 15px;
-  line-height: 1.75;
+  margin-top: 18px;
+  font-size: 16px;
+  line-height: 1.8;
   color: var(--muted);
-  max-width: 64ch;
+  max-width: 62ch;
 }
 
 /* Home hero buttons */
@@ -569,7 +560,7 @@ a:hover {
   position: relative;
   max-width: 1000px;
   margin: 0 auto;
-  margin-top: -50px;
+  margin-top: -100px;
 }
 
 .framework-arches-svg {
@@ -674,9 +665,9 @@ a:hover {
   z-index: 2;
   padding: 30px;
   border-radius: var(--radius);
-  background: rgba(246, 244, 241, 0.78);
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  backdrop-filter: blur(7px);
+  background: rgba(237, 233, 228, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-soft);
 
   /* overlap into image */
   margin-right: -160px;
@@ -707,20 +698,19 @@ a:hover {
 ====================================================== */
 .section-framework--home {
   background: var(--bg);
-  padding: 20px 0 16px;
+  padding: 38px 0 16px;
 }
 
-/* Pull arches up closer to title */
 .framework-arches--home {
   max-width: 1100px;
-  margin-top: -60px;
+  margin-top: -150px;   /* statt -150px */
 }
 
-/* Move the cards slightly (fine tuned for home) */
 .framework-arch--home {
-  transform: translateY(-62px);
+  transform: translateY(-62px); /* statt -40px */
   padding: 0 18px;
 }
+
 
 /* Card styling inside home arches */
 .framework-card {
@@ -761,34 +751,115 @@ a:hover {
 
 /* ======================================================
    14) HOME — How it works (shadow cards)
-====================================================== */
-.home-steps {
+======================================================  */
+
+.section-steps {
   margin-top: 72px;
 }
 
-.home-steps-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
+.section-steps .steps-media {
   margin-top: 14px;
 }
 
-.home-step-card {
-  padding: 18px;
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.06);
+/* image wrapper */
+.steps-media {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+  min-height: 440px;
 }
 
-.home-step-title {
+/* image look */
+.steps-media img {
+  filter: saturate(0.86) contrast(0.86);
+  transform: scale(1.03);
+}
+
+/* soft wash for readability */
+.steps-media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: radial-gradient(
+    900px 520px at 35% 40%,
+    rgba(246, 244, 241, 0.32) 0%,
+    rgba(246, 244, 241, 0.16) 55%,
+    rgba(246, 244, 241, 0) 100%
+  );
+}
+
+/* overlay box */
+.steps-box {
+  position: absolute;
+  z-index: 2;
+  inset: 18px;              /* ~5mm outer gap */
+  padding: 28px;
+  border-radius: var(--radius);
+  background: rgba(237, 233, 228, 0.78);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(10px);
+  box-shadow:
+    0 22px 70px rgba(0, 0, 0, 0.14),
+    0 80px 220px rgba(0, 0, 0, 0.10);
+}
+
+/* cards */
+.steps-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.steps-card {
+  background: rgba(246, 244, 241, 0.92);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  padding: 22px 29px;
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.10),
+    0 55px 160px rgba(0, 0, 0, 0.10);
+}
+
+/* stagger */
+.steps-card:nth-child(2) { margin-left: 70px; }
+.steps-card:nth-child(3) { margin-left: 140px; }
+
+/* text */
+.steps-title {
   font-weight: 900;
   letter-spacing: -0.02em;
+  font-size: 17px;
 }
 
-.home-step-desc {
-  color: var(--muted);
-  margin-top: 8px;
-  font-size: 14px;
-  line-height: 1.7;
+.steps-desc {
+  margin-top: 10px;
+  color: rgba(31, 31, 31, 0.70);
+  font-size: 16px;
+  line-height: 1.8;
 }
+
+/* mobile */
+@media (max-width: 900px) {
+  .steps-media {
+    min-height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .steps-box {
+    position: relative;
+    inset: auto;
+    margin: 14px;
+    padding: 24px;
+  }
+
+  .steps-card:nth-child(2),
+  .steps-card:nth-child(3) {
+    margin-left: 0;
+  }
+}
+
 
 /* ======================================================
    15) RESPONSIVE (Tablet / Mobile)
@@ -885,10 +956,7 @@ a:hover {
     font-size: 15px;
   }
 
-  /* Home stage variant */
-  .stage--home {
-    padding: 72px 0 56px;
-  }
+
 
   /* Services: stack + remove overlaps */
   .editorial-service-row {
@@ -981,5 +1049,298 @@ a:hover {
   .framework-arch--home {
     transform: none;
     padding: 0;
+  }
+}
+/* =========================
+   HOME — FAQ
+========================= */
+
+.section-faq { margin-top: 72px; }
+
+.faq-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.faq-card{ padding: 18px; }
+
+.faq-q{
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.faq-a{
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+@media (max-width: 900px){
+  .faq-grid{ grid-template-columns: 1fr; }
+}
+/* =========================
+   HOME — CTA BAND
+========================= */
+
+.cta-band{
+  margin-top: 72px;
+  padding: 26px;
+  border-radius: var(--radius);
+  background: var(--bg-soft);
+  border: 1px solid var(--border-soft); 
+  box-shadow: 0 18px 50px rgba(0,0,0,0.04);
+}
+
+.cta-band-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cta-band-title{
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin: 0;
+}
+
+.cta-band-desc{
+  margin-top: 6px;
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 60ch;
+}
+
+.cta-band-actions{
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@media (max-width: 900px){
+  .cta-band{
+    padding: 22px;
+  }
+
+  .cta-band-title{
+    font-size: 20px;
+  }
+
+  .cta-band-inner{
+    align-items: flex-start;
+  }
+}
+/* =========================
+   STAGE — one baseline for ALL pages
+========================= */
+.stage {
+  padding: 92px 0 72px;
+}
+
+.stage-inner {
+  max-width: 860px;
+  padding: 12px 0;
+}
+
+/* kicker-to-title spacing always same */
+.stage-inner .kicker {
+  margin: 0 0 12px;
+}
+
+/* title baseline always same */
+.stage-title {
+  margin: 0;
+}
+/* ======================================================
+   FOOTER (clean, aligned, compact)
+   Structure: Brand | Contact | Pages | Legal + Bottom bar
+====================================================== */
+
+.site-footer {
+  background: rgba(237, 233, 228, 0.55);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  margin-top: 70px;
+}
+
+.site-footer__inner {
+  padding: 52px 0;
+  display: grid;
+
+  /* Key fix:
+     last 2 columns are auto -> Pages sits closer to Legal (right side),
+     no “floating in the middle” */
+  grid-template-columns: 1.25fr 1fr auto auto;
+
+  /* smaller spacing between columns */
+  column-gap: 34px;
+  row-gap: 28px;
+
+  align-items: start; /* same top line for all columns */
+}
+
+/* --- Scoped reset (avoid global ul/li styles messing with footer) --- */
+.site-footer ul,
+.site-footer li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer a {
+  color: rgba(31, 31, 31, 0.72);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: rgba(31, 31, 31, 0.9);
+}
+
+/* --- Brand --- */
+.site-footer__brandLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0px;
+}
+.site-footer__logo{
+  width: 40px;             /* vorher 32px */
+  height: 40px;
+  display: block;
+  transform: translate(-3px, -2px); 
+  
+}
+
+.site-footer__brandName {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.site-footer__brandTag {
+  margin-top: 3px;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(31, 31, 31, 0.55);
+  line-height: 1.1;
+}
+
+.site-footer__desc {
+  margin-top: 14px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(31, 31, 31, 0.68);
+  max-width: 44ch;
+}
+
+/* --- Column titles --- */
+.site-footer__colTitle {
+  margin: 0 0 12px;
+  font-size: 12px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: rgba(31, 31, 31, 0.55);
+}
+
+/* --- Pages / Legal links --- */
+.site-footer__links {
+  display: grid;
+  gap: 10px;
+}
+
+.site-footer__links a {
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+/* --- Contact: same rhythm/size as link lists + clean alignment --- */
+.site-footer__contact {
+  display: grid;
+  gap: 10px; /* same as links -> lines match perfectly */
+}
+
+.site-footer__contact li {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 10px;
+  align-items: center;
+
+  font-size: 13px;   /* FIX: smaller + consistent */
+  line-height: 1.35; /* FIX: consistent */
+  color: rgba(31, 31, 31, 0.72);
+}
+
+.site-footer__contact svg {
+  width: 15px;
+  height: 15px;
+  opacity: 0.75;
+}
+
+/* --- Bottom bar --- */
+.site-footer__bottom {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  background: rgba(246, 244, 241, 0.35);
+}
+
+.site-footer__bottomInner {
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.site-footer__copyright {
+  font-size: 12.5px;
+  color: rgba(31, 31, 31, 0.55);
+}
+
+.site-footer__social {
+  display: flex;
+  gap: 10px;
+}
+
+.site-footer__social a {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(246, 244, 241, 0.6);
+  color: rgba(31, 31, 31, 0.65);
+}
+
+.site-footer__social a:hover {
+  background: rgba(246, 244, 241, 0.85);
+  color: rgba(31, 31, 31, 0.85);
+}
+
+/* --- Responsive --- */
+@media (max-width: 1000px) {
+  .site-footer__inner {
+    grid-template-columns: 1.2fr 1fr auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .site-footer__inner {
+    grid-template-columns: 1fr;
+    padding: 40px 0;
+    row-gap: 22px;
+  }
+
+  .site-footer__bottomInner {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

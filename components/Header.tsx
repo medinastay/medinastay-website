@@ -59,7 +59,7 @@ export default function Header() {
 
         {/* RIGHT */}
         <div className="header-social">
-          <a href="https://www.instagram.com/medinastay/#" target="_blank" aria-label="Instagram">
+          <a href="https://www.instagram.com/medina.stay/#" target="_blank" aria-label="Instagram">
             <Instagram size={18} />
           </a>
           <a href="https://wa.me/212XXXXXXX" target="_blank" aria-label="WhatsApp">

@@ -172,58 +172,59 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4) HOW IT WORKS */}
-      <section className="home-steps">
+      {/* 4) HOW IT WORKS (overlay on image, staggered cards) */}
+      <section className="section-steps">
         <div className="container">
           <h2 className="section-title">How it works</h2>
 
-          <div className="home-steps-grid">
-            {[
-              [
-                "1. Review",
-                "We look at your property and your goals. You get a clear picture of what makes sense next.",
-              ],
-              [
-                "2. Setup",
-                "We set up standards, vendors, and workflows. If needed, we handle renovation, styling, and preparation.",
-              ],
-              [
-                "3. Operate & report",
-                "We take care of daily operations. You receive clear updates and regular reports.",
-              ],
-            ].map(([title, desc]) => (
-              <div key={title} className="card home-step-card">
-                <div className="home-step-title">{title}</div>
-                <div className="home-step-desc">{desc}</div>
+          <div className="steps-media">
+            <Image
+              src={HERO_SRC} // oder eigenes Bild
+              alt=""
+              fill
+              sizes="100vw"
+              style={{ objectFit: "cover" }}
+            />
+
+            {/* Overlay box sits بالكامل on the image */}
+            <div className="steps-box">
+              <div className="steps-grid">
+                {[
+                  [
+                    "I. Review",
+                    "We look at your property and your goals. You get a clear picture of what makes sense next.",
+                  ],
+                  [
+                    "II. Setup",
+                    "We set up standards, vendors, and workflows. If needed, we handle renovation, styling, and preparation.",
+                  ],
+                  [
+                    "III. Operate & report",
+                    "We take care of daily operations. You receive clear updates and regular reports.",
+                  ],
+                ].map(([title, desc]) => (
+                  <div key={title} className="steps-card">
+                    <div className="steps-title">{title}</div>
+                    <div className="steps-desc">{desc}</div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* 5) FAQ */}
-      <section className="home-faq">
+      <section className="section-faq">
         <div className="container">
           <h2 className="section-title">FAQ</h2>
 
-          <div className="grid-2">
+          <div className="faq-grid">
             {[
-              [
-                "How do you charge?",
-                "We charge a management fee based on revenue. Renovation and setup are priced separately.",
-              ],
-              [
-                "What is included in operations?",
-                "Daily pricing, guest and cleaning coordination, quality checks, and light maintenance.",
-              ],
-              [
-                "Who pays cleaning and laundry?",
-                "These costs are paid at cost and shown clearly in monthly reports.",
-              ],
-              [
-                "Do I need to be involved day to day?",
-                "No. We handle daily operations and keep you informed with clear updates.",
-              ],
+              ["How do you charge?", "We charge a management fee based on revenue. Renovation and setup are priced separately."],
+              ["What is included in operations?", "Daily pricing, guest and cleaning coordination, quality checks, and light maintenance."],
+              ["Who pays cleaning and laundry?", "These costs are paid at cost and shown clearly in monthly reports."],
+              ["Do I need to be involved day to day?", "No. We handle daily operations and keep you informed with clear updates."],
             ].map(([q, a]) => (
               <div key={q} className="card faq-card">
                 <div className="faq-q">{q}</div>
@@ -233,27 +234,25 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
+      
       {/* 6) CLOSING CTA */}
-      <section className="card cta-band">
-        <div className="container cta-band-inner">
-          <div className="kicker">Next step</div>
+      <section style={{ marginTop: 72 }}>
+        <div className="container">
+          <div className="cta-band">
+            <div className="kicker">Next step</div>
 
-          <div className="cta-band-row">
-            <div>
-              <div className="cta-band-title">Request a property assessment.</div>
-              <div className="cta-band-sub">
-                We review your property and design the best way forward.
+            <div className="cta-band-inner">
+              <div>
+                <h3 className="cta-band-title">Request a property assessment.</h3>
+                <div className="cta-band-desc">
+                  We review your property and design the best way forward.
+                </div>
               </div>
-            </div>
 
-            <div className="cta-band-actions">
-              <Link className="btn btn-primary" href="/contact">
-                Request Assessment
-              </Link>
-              <a className="btn btn-outline" href={WHATSAPP} target="_blank" rel="noreferrer">
-                WhatsApp
-              </a>
+              <div className="cta-band-actions">
+                <Link className="btn btn-primary" href="/contact">Request Assessment</Link>
+                <a className="btn btn-outline" href={WHATSAPP} target="_blank" rel="noreferrer">WhatsApp</a>
+              </div>
             </div>
           </div>
         </div>

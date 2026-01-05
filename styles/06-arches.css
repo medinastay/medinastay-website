@@ -1,0 +1,126 @@
+/* ======================================================
+   06) ARCHES — Shared (Home + Services)
+   Used by: Services (Our Framework) + Home (How we create value)
+   Note: classnames are kept as-is to avoid JSX refactors.
+   TOC
+   1) Section wrapper
+   2) Arches layout (desktop)
+   2b) Home variant
+   3) Arch typography
+   4) CTA area
+   5) Mobile stacking
+====================================================== */
+
+/* =========================
+   1) Section wrapper
+========================= */
+
+.section-framework {
+  padding: 48px 0 24px;
+  background: var(--bg);
+}
+
+/* =========================
+   2) Arches layout (desktop)
+========================= */
+
+.framework-arches {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: -100px; /* pulls arches into section title space */
+}
+
+.framework-arches-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0.95;
+}
+
+/* text inside arches */
+.framework-arch {
+  position: absolute;
+  width: 26%;
+  text-align: center;
+  padding: 0 24px;
+  transform: translateY(-80px);
+}
+
+.arch-1 { left: 3%;  top: 53%; }
+.arch-2 { left: 37%; top: 53%; }
+.arch-3 { left: 71%; top: 53%; }
+
+/* =========================
+   2b) Home variant (optional)
+   keep it here so framework stays centralized
+========================= */
+
+.framework-arches--home {
+  max-width: 1100px;
+}
+
+.section-framework--home .framework-cta {
+  margin-top: 16px;
+}
+
+/* =========================
+   3) Arch typography
+========================= */
+
+.framework-arch h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 20px;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+.framework-arch p {
+  font-size: 13px;
+  line-height: 1.9;
+  color: rgba(31, 31, 31, 0.85);
+  margin: 0;
+}
+
+/* =========================
+   4) CTA area
+========================= */
+
+.framework-cta {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+/* =========================
+   5) Mobile stacking
+========================= */
+
+@media (max-width: 900px) {
+  .framework-arches-svg {
+    display: none;
+  }
+
+  .framework-arches {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 100%;
+    margin-top: 18px;
+  }
+
+  .framework-arch {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    width: 100%;
+    text-align: left;
+    padding: 0;
+  }
+
+  .framework-cta {
+    justify-content: flex-start;
+  }
+}

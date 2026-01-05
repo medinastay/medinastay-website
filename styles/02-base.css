@@ -126,6 +126,6 @@ li {
   text-transform: uppercase;
   font-weight: 500;
   color: var(--accent);
-  padding-left: 4px;
+  padding-left: 0px;
   margin-top: 6px; /* can be overridden in stage baseline */
 }

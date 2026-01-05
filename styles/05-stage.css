@@ -74,6 +74,17 @@
   font-weight: 300;
   margin: 0;
 }
+/* Stage title line helpers (used on Home + Services) */
+.hero-line-primary {
+  display: block;
+  white-space: normal;
+}
+
+.hero-line-secondary {
+  display: block;
+  opacity: 0.9;
+  margin-top: 8px;
+}
 
 .stage-sub {
   margin-top: 18px;

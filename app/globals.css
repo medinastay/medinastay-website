@@ -3,17 +3,14 @@
    Single source of truth:
    tokens → base → layout → shared sections → pages
 ====================================================== */
-
 @import "../styles/01-tokens.css";
 @import "../styles/02-base.css";
 @import "../styles/03-layout.css";
-
 @import "../styles/04-header.css";
 @import "../styles/05-stage.css";
-@import "../styles/06-footer.css";
-
-@import "../styles/07-home.css";
-@import "../styles/08-services.css";
-
-@import "../styles/09-projects.css";
-@import "../styles/10-contact.css";
+@import "../styles/06-arches.css";
+@import "../styles/07-footer.css";
+@import "../styles/08-home.css";
+@import "../styles/09-services.css";
+@import "../styles/10-projects.css";
+@import "../styles/11-contact.css";

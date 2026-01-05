@@ -2,23 +2,22 @@ import Image from "next/image";
 import Link from "next/link";
 
 const BANNER_SRC = "/services-banner.jpg";
+const WHATSAPP = "https://wa.me/212XXXXXXXXX"; // TODO
 
+/**
+ * Services Page — Structure
+ * 1) Stage / Hero
+ * 2) Our Services (editorial rows)
+ * 3) Our Framework (arches)
+ * 4) Closing CTA (same as Home)
+ */
 export default function ServicesPage() {
   return (
     <main>
-      {/* =========================
-         STAGE / HERO (UNVERÄNDERT)
-      ========================= */}
+      {/* 1) STAGE / HERO */}
       <section className="stage">
         <div className="stage-bg" aria-hidden="true">
-          <Image
-            src={BANNER_SRC}
-            alt=""
-            fill
-            priority
-            sizes="100vw"
-            style={{ objectFit: "cover" }}
-          />
+          <Image src={BANNER_SRC} alt="" fill priority sizes="100vw" style={{ objectFit: "cover" }} />
           <div className="stage-overlay" />
         </div>
 
@@ -27,9 +26,8 @@ export default function ServicesPage() {
             <div className="kicker">medina stay · Tangier Morocco</div>
 
             <h1 className="stage-title">
-              local knowledge.
-              <br />
-              international discipline.
+              <span className="hero-line-primary">local knowledge.</span>
+              <span className="hero-line-secondary">international discipline.</span>
             </h1>
 
             <p className="stage-sub">
@@ -41,33 +39,20 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* =========================
-         WHAT WE MANAGE — Editorial
-      ========================= */}
-      <section className="section">
+      {/* 2) OUR SERVICES */}
+      <section>
         <div className="container">
           <h2 className="section-title">Our Services</h2>
 
           <div className="editorial-services">
-            {/* ROW 1 — Rental */}
             <article id="operations" className="editorial-service-row editorial-service-row--rental">
               <div className="editorial-service-media">
-                <Image
-                  src="/services-rent.png"
-                  alt="Rental & Operations"
-                  fill
-                  sizes="(max-width: 900px) 100vw, 60vw"
-                  style={{ objectFit: "cover" }}
-                />
-                <div className="editorial-media-caption">
-                  Rental &amp; Operations
-                </div>
+                <Image src="/services-rent.png" alt="Rental & Operations" fill sizes="(max-width: 900px) 100vw, 60vw" style={{ objectFit: "cover" }} />
+                <div className="editorial-media-caption">Rental &amp; Operations</div>
               </div>
 
               <div className="editorial-service-box">
-                <h3 className="editorial-service-heading">
-                  Rental &amp; Operations
-                </h3>
+                <h3 className="editorial-service-heading">Rental &amp; Operations</h3>
                 <p className="editorial-service-desc">
                   We manage both short-term rentals (for example Airbnb) and long-term rentals.
                   Our level of involvement depends on the rental model.
@@ -90,15 +75,11 @@ export default function ServicesPage() {
               </div>
             </article>
 
-            {/* ROW 2 — Care */}
             <article id="care" className="editorial-service-row editorial-service-row--care">
               <div className="editorial-service-box">
-                <h3 className="editorial-service-heading">
-                  Property Care &amp; Planning
-                </h3>
+                <h3 className="editorial-service-heading">Property Care &amp; Planning</h3>
                 <p className="editorial-service-desc">
-                  Properties in the Medina require regular care and planning,
-                  especially when they are not occupied.
+                  Properties in the Medina require regular care and planning, especially when they are not occupied.
                   We provide structure, oversight, and control for long-term ownership.
                 </p>
 
@@ -113,47 +94,26 @@ export default function ServicesPage() {
                 <div className="editorial-service-note">
                   <strong>For owners: </strong>
                   No surprises. Clear information. Clear decisions.
-
                 </div>
               </div>
 
-              <div className="editorial-service-media editorial-service-media--offset">
-                <Image
-                  src="/services-property-planning.jpg"
-                  alt="Property Care & Planning"
-                  fill
-                  sizes="(max-width: 900px) 100vw, 60vw"
-                  style={{ objectFit: "cover" }}
-                />
-                <div className="editorial-media-caption">
-                  Property Care &amp; Planning
-                </div>
+              <div className="editorial-service-media">
+                <Image src="/services-property-planning.jpg" alt="Property Care & Planning" fill sizes="(max-width: 900px) 100vw, 60vw" style={{ objectFit: "cover" }} />
+                <div className="editorial-media-caption">Property Care &amp; Planning</div>
               </div>
             </article>
 
-            {/* ROW 3 — Renovation */}
             <article id="renovation" className="editorial-service-hero">
-
               <div className="editorial-service-heroMedia">
-                <Image
-                  src="/services-renovation3.png"
-                  alt="Renovation & Setup"
-                  fill
-                  sizes="100vw"
-                  style={{ objectFit: "cover" }}
-                />
-                <div className="editorial-media-caption editorial-media-caption--hero">
-                  Renovation &amp; Setup
-                </div>
+                <Image src="/services-renovation3.png" alt="Renovation & Setup" fill sizes="100vw" style={{ objectFit: "cover" }} />
+                <div className="editorial-media-caption editorial-media-caption--hero">Renovation &amp; Setup</div>
               </div>
 
               <div className="editorial-service-heroBox">
-                <h3 className="editorial-service-heading">
-                  Renovation &amp; Setup
-                </h3>
+                <h3 className="editorial-service-heading">Renovation &amp; Setup</h3>
                 <p className="editorial-service-desc">
-                  Renovation is a key part of medina stay.
-                  For new or older properties, we manage the full renovation process.                </p>
+                  Renovation is a key part of medina stay. For new or older properties, we manage the full renovation process.
+                </p>
 
                 <ul className="editorial-service-list">
                   <li>Check what is possible and define the scope</li>
@@ -167,10 +127,7 @@ export default function ServicesPage() {
 
                 <div className="editorial-service-note">
                   <strong>For owners: </strong>
-                  One point of contact.
-                  One clear plan.
-                  One finished property.
-
+                  One point of contact. One clear plan. One finished property.
                 </div>
               </div>
             </article>
@@ -178,23 +135,14 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* =========================
-         THE FRAMEWORK
-      ========================= */}
+      {/* 3) OUR FRAMEWORK (ARCHES) */}
       <section className="section-framework">
         <div className="container">
           <h2 className="section-title">Our Framework</h2>
 
           <div className="framework-arches">
-            {/* SVG BACKGROUND */}
-            <img
-              src="/framework-boegen2.svg"
-              alt=""
-              className="framework-arches-svg"
-              aria-hidden="true"
-            />
+            <img src="/framework-boegen2.svg" alt="" className="framework-arches-svg" aria-hidden="true" />
 
-            {/* ARCH 1 */}
             <div className="framework-arch arch-1">
               <h3>Pricing</h3>
               <p>
@@ -208,7 +156,6 @@ export default function ServicesPage() {
               </p>
             </div>
 
-            {/* ARCH 2 */}
             <div className="framework-arch arch-2">
               <h3>Reporting</h3>
               <p>
@@ -216,13 +163,12 @@ export default function ServicesPage() {
                 <br />◇<br />
                 Reporting on performance, costs, and property condition.
                 <br />◆<br />
-                Owners receive updates regularly. 
+                Owners receive updates regularly.
                 <br />◇<br />
                 No daily involvement required.
               </p>
             </div>
 
-            {/* ARCH 3 */}
             <div className="framework-arch arch-3">
               <h3>Operating model</h3>
               <p>
@@ -230,8 +176,7 @@ export default function ServicesPage() {
                 <br />◇<br />
                 Each property is managed as part of one system.
                 <br />◆<br />
-                We work with a limited number of properties
-                to keep control and responsibility.
+                We work with a limited number of properties to keep control and responsibility.
                 <br />◇<br />
                 We are not a mass operator.
               </p>
@@ -239,13 +184,31 @@ export default function ServicesPage() {
           </div>
 
           <div className="framework-cta">
-            <a className="btn btn-outline" href="/contact">
-              Request assessment
-            </a>
+            <Link className="btn btn-outline" href="/contact">Request assessment</Link>
           </div>
         </div>
       </section>
 
+      {/* 4) CLOSING CTA */}
+      <section>
+        <div className="container">
+          <div className="cta-band">
+            <div className="kicker">Next step</div>
+
+            <div className="cta-band-inner">
+              <div>
+                <h3 className="cta-band-title">Request a property assessment.</h3>
+                <div className="cta-band-desc">We review your property and design the best way forward.</div>
+              </div>
+
+              <div className="cta-band-actions">
+                <Link className="btn btn-primary" href="/contact">Request Assessment</Link>
+                <a className="btn btn-outline" href={WHATSAPP} target="_blank" rel="noreferrer">WhatsApp</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

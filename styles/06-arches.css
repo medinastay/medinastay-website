@@ -93,7 +93,7 @@
 }
 
 /* =========================
-   5) Mobile: show arches + centered stacking
+   5) Mobile Version
 ========================= */
 
 @media (max-width: 900px) {
@@ -120,7 +120,7 @@
     width: 100%;
 
     text-align: center;
-    padding: 74px 22px 22px;     /* top padding creates arch “headroom” */
+    padding: 78px 22px 34px;     /* top padding creates arch “headroom” */
     border-radius: 999px 999px 22px 22px;
     overflow: hidden;
 
@@ -170,7 +170,7 @@
 
   /* typography tweaks for mobile */
   .framework-arch h3 {
-    margin: 0 0 10px;
+    margin: 0 0 20px;
   }
 
   .framework-arch p {

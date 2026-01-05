@@ -147,11 +147,11 @@ export default function ServicesPage() {
               <h3>Pricing</h3>
               <p>
                 There are no fixed prices.
-                <br />◇<br />
+                <br />◆<br />
                 Pricing depends on the property and the rental model.
                 <br />◆<br />
                 Renovation projects are priced based on scope and budget.
-                <br />◇<br />
+                <br />◆<br />
                 All pricing is discussed clearly before start.
               </p>
             </div>
@@ -160,11 +160,11 @@ export default function ServicesPage() {
               <h3>Reporting</h3>
               <p>
                 Clear overview of what matters.
-                <br />◇<br />
+                <br />◆<br />
                 Reporting on performance, costs, and property condition.
                 <br />◆<br />
                 Owners receive updates regularly.
-                <br />◇<br />
+                <br />◆<br />
                 No daily involvement required.
               </p>
             </div>
@@ -173,11 +173,11 @@ export default function ServicesPage() {
               <h3>Operating model</h3>
               <p>
                 We are not a booking platform.
-                <br />◇<br />
+                <br />◆<br />
                 Each property is managed as part of one system.
                 <br />◆<br />
                 We work with a limited number of properties to keep control and responsibility.
-                <br />◇<br />
+                <br />◆<br />
                 We are not a mass operator.
               </p>
             </div>

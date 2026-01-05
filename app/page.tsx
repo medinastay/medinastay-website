@@ -91,11 +91,11 @@ export default function HomePage() {
               <h3>Operations</h3>
               <p>
                 We manage daily work so your property runs smoothly without your involvement.
-                <br />◇<br />
+                <br />◆<br />
                 Pricing and bookings
                 <br />◆<br />
                 Guest and vendor coordination
-                <br />◇<br />
+                <br />◆<br />
                 Quality checks
               </p>
               <div className="framework-cta">
@@ -107,11 +107,11 @@ export default function HomePage() {
               <h3>Property care &amp; planning</h3>
               <p>
                 We take care of maintenance and planning to protect your property over time.
-                <br />◇<br />
+                <br />◆<br />
                 Property care
                 <br />◆<br />
                 Maintenance planning
-                <br />◇<br />
+                <br />◆<br />
                 Condition reports
               </p>
               <div className="framework-cta">
@@ -123,11 +123,11 @@ export default function HomePage() {
               <h3>Renovation &amp; setup</h3>
               <p>
                 We manage renovation projects and improvements with a clear purpose.
-                <br />◇<br />
+                <br />◆<br />
                 Design and planning
                 <br />◆<br />
                 Budget control
-                <br />◇<br />
+                <br />◆<br />
                 Smart investment decisions
               </p>
               <div className="framework-cta">

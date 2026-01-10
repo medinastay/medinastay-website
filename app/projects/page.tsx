@@ -1,3 +1,3 @@
-export default function ServicesPage() {
-  return <main>Services – hier kommen später deine Inhalte rein.</main>;
+export default function ProjectsPage() {
+  return <main>Coming soon.</main>;
 }

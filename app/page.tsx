@@ -61,7 +61,7 @@ export default function HomePage() {
                 </div>
 
                 <div>
-                  <div className="expect-title">Structured operations</div>
+                  <div className="expect-title">Disciplined operations</div>
                   <div className="expect-desc">Clear processes across operations, projects, and maintenance.</div>
                 </div>
 
@@ -172,7 +172,7 @@ export default function HomePage() {
             {[
               ["How do you charge?", "We charge a management fee based on revenue. Renovation and setup are priced separately."],
               ["What is included in operations?", "Daily pricing, guest and cleaning coordination, quality checks, and light maintenance."],
-              ["Who pays cleaning and laundry?", "These costs are paid at cost and shown clearly in monthly reports."],
+              ["Who is the contracting company?", "Medina Stay is the operating brand. Contracts and billing are handled by Hichou Group."],
               ["Do I need to be involved day to day?", "No. We handle daily operations and keep you informed with clear updates."],
             ].map(([q, a]) => (
               <div key={q} className="card faq-card">

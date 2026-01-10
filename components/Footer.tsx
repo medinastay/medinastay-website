@@ -47,6 +47,9 @@ export default function Footer() {
             <p className="site-footer__desc">
               Premium property management in Tangier with international standards and local expertise.
             </p>
+            <p className="site-footer__operator">
+  Operated by <strong>Hichou Group</strong>.
+</p>
           </div>
 
           {/* 02) Contact */}

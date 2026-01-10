@@ -77,7 +77,15 @@
   color: rgba(31, 31, 31, 0.68);
   max-width: 44ch;
 }
-
+.site-footer__operator{
+  margin-top: 10px;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: rgba(31, 31, 31, 0.55);
+}
+.site-footer__operator strong{
+  font-weight: 600;
+}
 /* --- Column titles --- */
 .site-footer__colTitle {
   margin: 0 0 12px;

@@ -2,13 +2,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone, MapPin, Instagram, Linkedin, MessageCircle } from "lucide-react";
 
-const CONTACT_EMAIL = "contact@medinastay.com";
-const CONTACT_PHONE = "+212 6XX XXX XXX"; // placeholder Morocco number
+const CONTACT_EMAIL = "contact@medina-stay.com";
+const CONTACT_PHONE = "+212 612 472 003"; 
 const CONTACT_ADDRESS = "Rue Sidi Bouknadel N0 52, Tangier, Morocco";
 
 const INSTAGRAM_URL = "https://instagram.com/medina.stay";
 const LINKEDIN_URL = "https://linkedin.com/medina.stay";
-const WHATSAPP_URL = "https://wa.me/2126XXXXXXXX";
+const WHATSAPP_URL = "https://wa.me/212612472003";
 const AIRBNB_URL = "https://www.airbnb.com/users/show/XXXXXXXX"; // TODO
 
 function AirbnbIcon({ size = 18 }: { size?: number }) {

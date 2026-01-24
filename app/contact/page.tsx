@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 
-const BANNER_SRC = "/services-banner.jpg"; // oder eigenes contact-banner.jpg
-const CONTACT_EMAIL = "contact@medinastay.com";
-const CONTACT_PHONE = "+212 6XX XXX XXX";
+const BANNER_SRC = "/contact-banner.jpg"; 
+const CONTACT_EMAIL = "contact@medina-stay.com";
+const CONTACT_PHONE = "+212 612 472 003";
 const CONTACT_ADDRESS = "Rue Sidi Bouknadel N0 52, Tangier, Morocco";
-const WHATSAPP_URL = "https://wa.me/2126XXXXXXXX"; // TODO
+const WHATSAPP_URL = "https://wa.me/212612472003"; 
 
 /**
  * Contact Page — Structure

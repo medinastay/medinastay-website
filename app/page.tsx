@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const HERO_SRC = "/home-kasbah.jpg";
 const EXPECT_SRC = "/home-logo.jpg";
-const WHATSAPP = "https://wa.me/212XXXXXXXXX"; // TODO
+const WHATSAPP = "https://wa.me/212612472003"; 
 
 /**
  * Home Page — Structure

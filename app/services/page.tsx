@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const BANNER_SRC = "/services-banner.jpg";
-const WHATSAPP = "https://wa.me/212XXXXXXXXX"; // TODO
+const WHATSAPP = "https://wa.me/212612472003"; // TODO
 
 /**
  * Services Page — Structure

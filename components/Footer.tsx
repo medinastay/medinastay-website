@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Mail, Phone, MapPin, Instagram, Linkedin, MessageCircle } from "lucide-react";
 
 const CONTACT_EMAIL = "contact@medina-stay.com";
-const CONTACT_PHONE = "+212 612 472 003"; 
+const CONTACT_PHONE = "+212 612 472 003";
 const CONTACT_ADDRESS = "Rue Sidi Bouknadel N0 52, Tangier, Morocco";
 
 const INSTAGRAM_URL = "https://instagram.com/medina.stay";
@@ -48,8 +48,8 @@ export default function Footer() {
               Premium property management in Tangier with international standards and local expertise.
             </p>
             <p className="site-footer__operator">
-  Operated by <strong>Hichou Group</strong>.
-</p>
+              Owner-operated in <strong>Tangier</strong>.
+            </p>
           </div>
 
           {/* 02) Contact */}

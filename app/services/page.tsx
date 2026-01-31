@@ -31,9 +31,9 @@ export default function ServicesPage() {
             </h1>
 
             <p className="stage-sub">
-              Premium property management in the Medina of Tangier.
+              Premium owner-operator management in the Medina of Tangier.
               <br />
-              Structured, local, and fully managed.
+              On-site control. Clear reporting. Selective onboarding.
             </p>
           </div>
         </div>
@@ -54,8 +54,8 @@ export default function ServicesPage() {
               <div className="editorial-service-box">
                 <h3 className="editorial-service-heading">Rental &amp; Operations</h3>
                 <p className="editorial-service-desc">
-                  We manage both short-term rentals (for example Airbnb) and long-term rentals.
-                  Our level of involvement depends on the rental model.
+                  We manage both short-term rentals and long-term rentals.
+                  The operating depth depends on the rental model.
                 </p>
 
                 <ul className="editorial-service-list">
@@ -79,8 +79,8 @@ export default function ServicesPage() {
               <div className="editorial-service-box">
                 <h3 className="editorial-service-heading">Property Care &amp; Planning</h3>
                 <p className="editorial-service-desc">
-                  Properties in the Medina require regular care and planning, especially when they are not occupied.
-                  We provide structure, oversight, and control for long-term ownership.
+                  Properties in the Medina require regular care, especially for second homes and remote owners.
+                  We provide structure, oversight, and control.
                 </p>
 
                 <ul className="editorial-service-list">
@@ -111,25 +111,25 @@ export default function ServicesPage() {
 
               <div className="editorial-service-heroBox">
                 <h3 className="editorial-service-heading">Renovation &amp; Setup</h3>
+
                 <p className="editorial-service-desc">
-                  Renovation is a key part of medina stay. For new or older properties, we manage the full renovation process.
+                  We act as your on-site project manager and owner representative.
+                  Not a construction company. Owners contract and pay craftsmen and materials (or via mandate).
                 </p>
-
                 <ul className="editorial-service-list">
-                  <li>Check what is possible and define the scope</li>
-                  <li>Design and planning (Medina style with modern standards)</li>
-                  <li>Budget and timeline planning</li>
-                  <li>Coordination of local craftsmen</li>
-                  <li>On-site supervision and quality control</li>
-                  <li>Renovation project management from start to finish</li>
-                  <li>Handling permits and coordination with local authorities</li>
+                  <li>Define scope and priorities</li>
+                  <li>Design direction and planning (Medina character, modern standards)</li>
+                  <li>Budget and timeline control</li>
+                  <li>Coordinate local craftsmen</li>
+                  <li>On-site supervision and quality checks</li>
+                  <li>Project management from start to finish</li>
                 </ul>
-
                 <div className="editorial-service-note">
-                  <strong>For owners: </strong>
-                  One point of contact. One clear plan. One finished property.
+                  <strong>Fee model: </strong>
+                  Medina Stay charges a project management fee.
                 </div>
               </div>
+
             </article>
           </div>
         </div>
@@ -146,13 +146,13 @@ export default function ServicesPage() {
             <div className="framework-arch arch-1">
               <h3>Pricing</h3>
               <p>
-                There are no fixed prices.
+                Pricing is discussed before onboarding.
                 <br />◆<br />
-                Pricing depends on the property and the rental model.
+                Operations are charged as a management fee.
                 <br />◆<br />
-                Renovation projects are priced based on scope and budget.
+                Property care is a monthly plan.
                 <br />◆<br />
-                All pricing is discussed clearly before start.
+                Renovation oversight is a separate project fee based on scope.
               </p>
             </div>
 

@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 
-const BANNER_SRC = "/contact-banner.jpg"; 
+const BANNER_SRC = "/contact-banner.jpg";
 const CONTACT_EMAIL = "contact@medina-stay.com";
 const CONTACT_PHONE = "+212 612 472 003";
 const CONTACT_ADDRESS = "Rue Sidi Bouknadel N0 52, Tangier, Morocco";
-const WHATSAPP_URL = "https://wa.me/212612472003"; 
+const WHATSAPP_URL = "https://wa.me/212612472003";
 
 /**
  * Contact Page — Structure
@@ -76,7 +76,7 @@ export default function ContactPage() {
                 </li>
                 <li>
                   <span className="contact-bullet">◆</span>
-                  Renovation &amp; setup (scope, design, budget control, execution)
+                  Renovation &amp; setup (scope, design, budget control, quality checks)
                 </li>
               </ul>
 
@@ -131,17 +131,17 @@ export default function ContactPage() {
 
           <div className="operator-card">
             <p className="operator-text">
-              <strong>Medina Stay</strong> is the customer-facing brand for property operations,
-              care &amp; planning, and renovation setup.
+              <strong>Medina Stay</strong> operates selected properties in Tangier.
+              We cover operations, property care, and renovation oversight.
             </p>
             <p className="operator-text">
-              Contracts, billing, and operational execution are handled by{" "}
-              <strong>Hichou Group</strong> as the operating entity.
+              Contracting and billing details are shared during the assessment before any work starts.
             </p>
 
             <div className="operator-mini">
-              If you need the contracting details for your case, we share them during the assessment.
+              We provide a clear scope, the fee model, and written next steps before onboarding.
             </div>
+
           </div>
         </div>
       </section>

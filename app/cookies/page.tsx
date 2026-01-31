@@ -1,5 +1,5 @@
 export default function CookiesPage() {
-  const LAST_UPDATED = "28 Jan 2026";
+  const LAST_UPDATED = "30 Jan 2026";
   const EMAIL = "contact@medina-stay.com";
 
   return (
@@ -11,51 +11,42 @@ export default function CookiesPage() {
           <div className="legal-meta">Last updated: {LAST_UPDATED}</div>
 
           <p>
-            This Cookie Policy explains how <strong>medina-stay.com</strong> uses cookies and similar technologies.
-            Our website is designed to operate without marketing tracking.
+            This website is designed to work without marketing tracking. We currently do not use analytics or advertising
+            cookies.
           </p>
 
           <h2>1. What are cookies?</h2>
           <p>
-            Cookies are small text files stored on your device. Some cookies are necessary for basic website
-            functionality, security and performance. Similar technologies may include local storage or server logs.
+            Cookies are small text files stored on your device. Some cookies are necessary for basic functionality,
+            security and performance. Similar technologies may include local storage or server logs.
           </p>
 
           <h2>2. Cookies we use</h2>
-          <p>
-            We currently do not use analytics or advertising cookies. We may use:
-          </p>
           <ul>
             <li>
-              <strong>Essential / technical cookies</strong> (e.g. security, load balancing, basic functionality)
-              used by the website or our hosting/security infrastructure.
+              <strong>Essential / technical</strong>: may be used by our hosting and security infrastructure to keep the
+              website stable and safe.
             </li>
             <li>
-              <strong>Preference cookies</strong> (only if needed) to remember simple settings.
+              <strong>No marketing cookies</strong>: we do not use ad tracking cookies.
             </li>
           </ul>
 
           <h2>3. Third-party content</h2>
           <p>
-            If we embed third-party content in the future (for example Google Maps or social media embeds), those
-            providers may set cookies or receive technical data (such as your IP address). We will update this policy
-            and, where required, provide choices before loading such content.
+            If we embed third-party content in the future (for example Google Maps or social embeds), those providers may
+            set cookies or receive technical data (such as IP address). We will update this policy accordingly.
           </p>
 
-          <h2>4. How to manage cookies</h2>
+          <h2>4. Managing cookies</h2>
           <p>
-            You can manage cookies through your browser settings (block, delete, or restrict cookies).
-            Please note that blocking essential cookies may impact website functionality.
+            You can manage cookies via your browser settings (block, delete, restrict). Blocking essential cookies may
+            affect website functionality.
           </p>
 
-          <h2>5. Updates</h2>
+          <h2>5. Contact</h2>
           <p>
-            We may update this Cookie Policy from time to time. The latest version will be published on this page.
-          </p>
-
-          <h2>6. Contact</h2>
-          <p>
-            If you have questions about cookies, contact <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.
+            For questions about cookies, contact <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.
           </p>
         </div>
       </section>

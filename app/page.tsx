@@ -43,7 +43,7 @@ export default function HomePage() {
             <p className="hero-description">
               Premium owner-operator management in Tangier.
               <br />
-               Selective onboarding. On-site control. Clear reporting.
+               We work with a limited number of homes. On-site control.
             </p>
 
             <div className="home-hero-actions">
@@ -230,7 +230,7 @@ export default function HomePage() {
               ],
               [
                 "Who is the contracting company?",
-                "Medina Stay is the operating company and contractual partner.",
+                "Medina Stay operates the service. Contracting and billing details are shared during the assessment before work starts.",
               ],
               [
                 "Do I need to be involved day to day?",

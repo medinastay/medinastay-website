@@ -70,7 +70,7 @@ export default function ServicesPage() {
 
                 <div className="editorial-service-note">
                   <strong>For owners: </strong>
-                  Updates and reports — no daily involvement.
+                  Updates and reports. No daily involvement.
                 </div>
               </div>
             </article>

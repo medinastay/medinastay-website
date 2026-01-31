@@ -47,18 +47,17 @@ export async function POST(req: Request) {
     }
 
     const transporter = nodemailer.createTransport({
-      host: SMTP_HOST,
-      port: SMTP_PORT,
-      secure: false,      // correct for 587
-      requireTLS: true,   // Zoho can be picky, this helps
+      host: process.env.SMTP_HOST, // smtppro.zoho.eu
+      port: 465,
+      secure: true,                // SSL
       auth: {
-        user: SMTP_USER,
-        pass: SMTP_PASS,
+        user: process.env.SMTP_USER, // admin@medina-stay.com
+        pass: process.env.SMTP_PASS, // App Password
       },
     });
 
-    // Verify SMTP connection (gives clearer errors in logs)
     await transporter.verify();
+
 
     const to = process.env.CONTACT_TO || SMTP_USER;
     const from = process.env.SMTP_FROM || SMTP_USER;

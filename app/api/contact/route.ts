@@ -47,11 +47,11 @@ export async function POST(req: Request) {
     }
 
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST, // smtppro.zoho.eu
+      host: process.env.SMTP_HOST, 
       port: 465,
       secure: true,                // SSL
       auth: {
-        user: process.env.SMTP_USER, // admin@medina-stay.com
+        user: process.env.SMTP_USER, 
         pass: process.env.SMTP_PASS, // App Password
       },
     });
@@ -88,7 +88,10 @@ export async function POST(req: Request) {
         `Hello ${name},\n\n` +
         `Thank you for your message. We received your request and will get back to you as soon as possible.\n` +
         `Typical response time is within 24 hours.\n\n` +
+        `Best regards,\n` +
         `Medina Stay\n` +
+        `Email: contact@medina-stay.com\n` +
+        `Phone: +212 612 472 003\n` +
         `${replyTo}\n`,
     });
 

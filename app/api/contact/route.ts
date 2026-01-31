@@ -90,8 +90,6 @@ export async function POST(req: Request) {
         `Typical response time is within 24 hours.\n\n` +
         `Best regards,\n` +
         `Medina Stay\n` +
-        `Email: contact@medina-stay.com\n` +
-        `Phone: +212 612 472 003\n` +
         `${replyTo}\n`,
     });
 

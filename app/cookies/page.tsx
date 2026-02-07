@@ -11,14 +11,14 @@ export default function CookiesPage() {
           <div className="legal-meta">Last updated: {LAST_UPDATED}</div>
 
           <p>
-            This website is designed to work without marketing tracking. We currently do not use analytics or advertising
-            cookies.
+            This website is designed to work without marketing tracking. We currently do not use analytics or
+            advertising cookies.
           </p>
 
           <h2>1. What are cookies?</h2>
           <p>
             Cookies are small text files stored on your device. Some cookies are necessary for basic functionality,
-            security and performance. Similar technologies may include local storage or server logs.
+            security, and performance. Similar technologies may include local storage or server logs.
           </p>
 
           <h2>2. Cookies we use</h2>
@@ -32,10 +32,16 @@ export default function CookiesPage() {
             </li>
           </ul>
 
-          <h2>3. Third-party content</h2>
+          <h2>3. Third-party content and services</h2>
           <p>
-            If we embed third-party content in the future (for example Google Maps or social embeds), those providers may
-            set cookies or receive technical data (such as IP address). We will update this policy accordingly.
+            Our website may include links to third-party services (for example WhatsApp, Instagram, or Google Maps). If
+            you click those links, those providers may process data and set cookies under their own policies.
+          </p>
+
+          <p>
+            On our Contact page, the map loads only after you click
+            “Load Google Map”. When loaded, Google may set cookies and process technical data (such as your IP address
+            and browser/device information) to provide the map.
           </p>
 
           <h2>4. Managing cookies</h2>

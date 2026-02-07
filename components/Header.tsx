@@ -37,7 +37,7 @@ export default function Header() {
         {/* LEFT */}
         <nav className="header-nav-left">
           <Link href="/services" className="nav-link">Services</Link>
-          <Link href="/projects" className="nav-link">Projects</Link>
+        {/*<Link href="/projects" className="nav-link">Projects</Link>*/}
           <Link href="/contact" className="nav-link">Contact</Link>
         </nav>
 

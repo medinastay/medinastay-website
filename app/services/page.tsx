@@ -54,14 +54,14 @@ export default function ServicesPage() {
               <div className="editorial-service-box">
                 <h3 className="editorial-service-heading">Rental &amp; Operations</h3>
                 <p className="editorial-service-desc">
-                  We manage both short-term rentals and long-term rentals.
-                  The operating depth depends on the rental model.
+                  We focus on short-term rentals. For longer stays, 
+                  we can support coordination and property oversight.
                 </p>
 
                 <ul className="editorial-service-list">
                   <li>Pricing and booking management</li>
                   <li>Guest communication for short-term rentals</li>
-                  <li>Tenant coordination for long-term rentals</li>
+                  <li>Longer-stay tenant coordination</li>
                   <li>Check-in / check-out coordination</li>
                   <li>Cleaning and laundry</li>
                   <li>Coordination of local service providers</li>
@@ -183,9 +183,7 @@ export default function ServicesPage() {
             </div>
           </div>
 
-          <div className="framework-cta">
-            <Link className="btn btn-outline" href="/contact">Request assessment</Link>
-          </div>
+          
         </div>
       </section>
 
@@ -202,7 +200,7 @@ export default function ServicesPage() {
               </div>
 
               <div className="cta-band-actions">
-                <Link className="btn btn-primary" href="/contact">Request Assessment</Link>
+                <Link className="btn btn-primary" href="/contact">Request assessment</Link>
                 <a className="btn btn-outline" href={WHATSAPP} target="_blank" rel="noreferrer">WhatsApp</a>
               </div>
             </div>

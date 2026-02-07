@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Instagram, Linkedin, MessageCircle } from "lucide-
 
 const CONTACT_EMAIL = "contact@medina-stay.com";
 const CONTACT_PHONE = "+212 612 472 003";
-const CONTACT_ADDRESS = "Rue Sidi Bouknadel N0 52, Tangier, Morocco";
+const CONTACT_ADDRESS = "Rue Sidi Bouknadel No. 52, Tangier, Morocco";
 
 const INSTAGRAM_URL = "https://instagram.com/medina.stay";
 const LINKEDIN_URL = "https://linkedin.com/medina.stay";
@@ -76,7 +76,7 @@ export default function Footer() {
             <div className="site-footer__colTitle">Pages</div>
             <div className="site-footer__links">
               <Link href="/services">Services</Link>
-              <Link href="/projects">Projects</Link>
+              {/*<Link href="/projects">Projects</Link>*/}
               <Link href="/contact">Contact</Link>
             </div>
           </div>

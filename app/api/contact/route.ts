@@ -80,9 +80,9 @@ export async function POST(req: Request) {
 
     // 2) Auto-confirmation to the visitor (premium touch)
     await transporter.sendMail({
-      from,       // admin@... (or whichever you set in SMTP_FROM)
+      from,       
       to: email,
-      replyTo,    // your contact mailbox (admin@... in your env right now)
+      replyTo,    
       subject: "We received your request",
       text:
         `Hello ${name},\n\n` +
@@ -103,7 +103,7 @@ export async function POST(req: Request) {
   }
 }
 
-// Optional: makes GET /api/contact not show 405 in browser
+
 export function GET() {
   return NextResponse.json({ ok: true, info: "Use POST to send messages." });
 }

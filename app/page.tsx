@@ -48,10 +48,11 @@ export default function HomePage() {
 
             <div className="home-hero-actions">
               <Link className="btn btn-primary" href="/contact">
-                Request Assessment
+                Request assessment
               </Link>
-              <Link className="btn btn-outline" href="/projects">
-                View projects
+              <Link className="btn btn-outline" href="/services">
+                View services 
+                {/**projects war davor*/}
               </Link>
             </div>
           </div>

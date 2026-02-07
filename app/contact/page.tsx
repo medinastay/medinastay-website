@@ -9,7 +9,7 @@ const EMAIL = "contact@medina-stay.com";
 const PHONE_DISPLAY = "+212 612 472 003";
 const PHONE_TEL = "+212612472003";
 const WHATSAPP_URL = "https://wa.me/212612472003";
-const ADDRESS = "Rue Sidi Bouknadel N0 52, Tangier, Morocco";
+const ADDRESS = "Rue Sidi Bouknadel No. 52, Tangier, Morocco";
 
 // Put your final Google Maps embed URL here (iframe src)
 const GOOGLE_MAPS_IFRAME_SRC =
@@ -98,8 +98,8 @@ export default function ContactPage() {
           <div className="stage-inner">
             <div className="kicker">Contact</div>
             <h1 className="stage-title">
-              <span className="hero-line-primary">request an assessment.</span>
-              <span className="hero-line-secondary">get clear next steps.</span>
+              <span className="hero-line-primary">request assessment.</span>
+              <span className="hero-line-secondary">get next steps.</span>
             </h1>
             <p className="hero-description">
               Tell us what you want to do with your property in Tangier.

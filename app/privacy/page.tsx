@@ -5,7 +5,7 @@ export default function PrivacyPage() {
   const WEBSITE = "medina-stay.com";
   const EMAIL = "contact@medina-stay.com";
   const PHONE = "+212 612 472 003";
-  const ADDRESS = "Rue Sidi Bouknadel N0 52, Tangier, Morocco";
+  const ADDRESS = "Rue Sidi Bouknadel No. 52, Tangier, Morocco";
 
   return (
     <main>

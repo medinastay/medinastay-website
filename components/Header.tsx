@@ -51,10 +51,10 @@ export default function Header() {
             className="brand-logo"
             priority
           />
-          <span className="brand-text">
+        {/*   <span className="brand-text">
             <span className="brand-name">medina stay</span>
             <span className="brand-tagline">Property Management</span>
-          </span>
+          </span>*/}
         </Link>
 
         {/* RIGHT */}

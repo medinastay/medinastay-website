@@ -45,7 +45,7 @@ export default function Footer() {
             </Link>
 
             <p className="site-footer__desc">
-              Premium property management in Tangier with international standards and local expertise.
+              Premium property management with international standards and local expertise.
             </p>
             <p className="site-footer__operator">
               Owner-operated in <strong>Tangier</strong>.

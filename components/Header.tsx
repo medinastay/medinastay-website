@@ -46,15 +46,15 @@ export default function Header() {
           <Image
             src="/logo.svg"
             alt="Medina Stay"
-            width={34}
-            height={34}
+            width={44}
+            height={44}
             className="brand-logo"
             priority
           />
-        {/*   <span className="brand-text">
+           <span className="brand-text">
             <span className="brand-name">medina stay</span>
             <span className="brand-tagline">Property Management</span>
-          </span>*/}
+          </span>
         </Link>
 
         {/* RIGHT */}

@@ -12,15 +12,15 @@ export default function Footer() {
             <Image
               src="/logo-mark.svg"
               alt="Medina Stay"
-              width={42}
-              height={42}
+              width={30}
+              height={30}
               className="site-footer__logo"
             />
             <Image
               src="/word-mark.svg"
               alt="Medina Stay Property Management"
-              width={160}
-              height={49}
+              width={118}
+              height={36}
               className="site-footer__wordmark"
             />
           </Link>
